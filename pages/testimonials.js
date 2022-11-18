@@ -5,7 +5,7 @@ import { useQuery} from '@apollo/client';
 import queries from '../utilities/queries';
 import ClientList from '../components/ClientList';
 import Title from '../components/Title';
-import "../../styles/views/testimonials.scss";
+// import "../styles/views/testimonials.scss";
 
 const Testimonials = () => {
     const context = React.useContext(AppContext);

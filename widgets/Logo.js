@@ -1,6 +1,6 @@
-import logo from '../../images/new_logo.png';
+import logo from '../public/images/new_logo.png';
 // import Image from "../../widgets/Image";
-import "../../styles/widgets/_logo.scss";
+// import "../../styles/widgets/_logo.scss";
 
 const Logo = (s)=>{
     return (
@@ -11,8 +11,5 @@ const Logo = (s)=>{
     );
 }
 
-// Logo.propTypes = {
-//     className: PropTypes.string,
-// };
 
 export default Logo;

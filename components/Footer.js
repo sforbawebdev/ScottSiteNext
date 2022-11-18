@@ -1,6 +1,6 @@
 import SocialList from '../components/SocialList';
 import Reveal from "../widgets/Reveal";
-import "../../styles/components/_footer.scss";
+// import "../../styles/components/_footer.scss";
 
 
 const Footer = (props) => {

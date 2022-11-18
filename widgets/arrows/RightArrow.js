@@ -1,4 +1,5 @@
-import "../../../styles/widgets/_arrows.scss";
+// import "../../../styles/widgets/_arrows.scss";
+
 const RightArrow = (props) => {
   const { onClick} = props;
 

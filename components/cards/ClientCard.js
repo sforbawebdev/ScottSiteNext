@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from "../../widgets/Image";
-import "../../../styles/components/_clients.scss";
+// import "../../../styles/components/_clients.scss";
 
 const ClientCard = (props) => {
     const {client} = props;

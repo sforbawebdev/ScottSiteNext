@@ -2,7 +2,7 @@ import Icon from '../components/icons';
 import { useQuery} from '@apollo/client';
 import queries from '../utilities/queries';
 import Reveal from "../widgets/Reveal";
-import "../../styles/components/_social-list.scss";
+// import "../../styles/components/_social-list.scss";
 
 const renderList = (data)=>{
     return data && data.map((item, index)=>{

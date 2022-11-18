@@ -6,7 +6,7 @@ import Reveal from '../widgets/Reveal';
 import Title from '../components/Title';
 import SocialList from '../components/SocialList';
 import queries from '../utilities/queries';
-import "../../styles/views/home.scss";
+// import "../../styles/views/home.scss";
 
 const Home = () => {
     const context = React.useContext(AppContext);

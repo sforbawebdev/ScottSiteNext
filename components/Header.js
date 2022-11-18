@@ -1,7 +1,7 @@
 import Button from '../widgets/Button';
 import Logo from '../widgets/Logo';
 import Reveal from "../widgets/Reveal";
-import "../../styles/components/_header.scss";
+// import "../../styles/components/_header.scss";
 
 const Header = () => {
     const handleButtonClick = () =>{

@@ -4,7 +4,7 @@ import Reveal from  '../../widgets/Reveal';
 import React from "react";
 import { useForm } from "react-hook-form";
 import {postToCF} from '../../utilities/helpers';
-import { ReCaptcha} from 'react-recaptcha-v3'
+// import { ReCaptcha} from 'react-recaptcha-v3'
 const {REACT_APP_WP_API_ENDPOINT} = process.env;
 
 const ContactForm = () =>{
@@ -17,7 +17,7 @@ const ContactForm = () =>{
         setSubmitState(status);
     };
     const verifyCallback = () => {
-    console.log("recaptcha loaded")
+        console.log("recaptcha loaded")
     }
 
     const updateToken = () => {
@@ -31,8 +31,8 @@ const ContactForm = () =>{
             <div className="form__row">
                 <div className="form__col full_width_col">
                     <label htmlFor="name">NAME*</label>
-                    <input name="fullname" type="text" defaultValue="" ref={register({ required: true })} />
-                    {errors.fullname && <span className="error-field">This field is required</span>}
+                    <input name="fullname" type="text" defaultValue="" {...register('test', { required: true })}/>
+                    {errors && errors.fullname && <span className="error-field">This field is required</span>}
                 </div>
             </div>
         </Reveal>
@@ -40,8 +40,8 @@ const ContactForm = () =>{
             <div className="form__row">
                 <div className="form__col full_width_col">
                     <label htmlFor="email">E-MAIL*</label>
-                    <input name="email" type="email" ref={register({ required: true })} />
-                    {errors.email && <span className="error-field">This field is required</span>}
+                    <input name="email" type="email" {...register('test', { required: true })} />
+                    {errors && errors.email && <span className="error-field">This field is required</span>}
                 </div>
             </div>
         </Reveal>
@@ -50,7 +50,7 @@ const ContactForm = () =>{
                 <div className="form__col full_width_col">
                     <label htmlFor="phone">PHONE*</label>
                     <input name="phone" type="tel" />
-                    {errors.phone && <span className="error-field">This field is required</span>}
+                    {errors && errors.phone && <span className="error-field">This field is required</span>}
                 </div>
             </div>
         </Reveal>
@@ -58,7 +58,7 @@ const ContactForm = () =>{
             <div className="form__row">
                 <div className="form__col full_width_col">
                     <label htmlFor="subject">SUBJECT*</label>
-                    <input name="subject" type="text" ref={register({ required: true })} />
+                    <input name="subject" type="text" {...register('test', { required: true })} />
                 </div>
             </div>
         </Reveal>
@@ -66,8 +66,8 @@ const ContactForm = () =>{
             <div className="form__row">
                 <div className="form__col full_width_col">
                     <label htmlFor="message">MESSAGE*</label>
-                    <textarea name="message" type="text"  ref={register({ required: true })} />
-                    {errors.message && <span className="error-field">This field is required</span>}
+                    <textarea name="message" type="text"  {...register('test', { required: true })} />
+                    {errors && errors.message && <span className="error-field">This field is required</span>}
                 </div>
             </div>
         </Reveal>
@@ -87,12 +87,12 @@ const ContactForm = () =>{
                     </Reveal>
                 )
             }
-        <ReCaptcha
+        {/* <ReCaptcha
             ref={recaptcha}
             sitekey="6LdJN2gaAAAAAK1xp40nixDntka8rr4uORcBEE-B"
             action='action_name'
             verifyCallback={verifyCallback}
-        />
+        /> */}
     </form>
     );
 }

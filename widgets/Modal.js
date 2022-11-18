@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "../../styles/widgets/_modal.scss";
+// import "../styles/widgets/_modal.scss";
 
 const Modal = ({ modal, isShowing, hideFunc }) => isShowing ? ReactDOM.createPortal(
   <React.Fragment>

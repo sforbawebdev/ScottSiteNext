@@ -5,7 +5,7 @@ import ContactForm from '../components/forms/ContactForm';
 import Title from '../components/Title';
 import { useQuery} from '@apollo/client';
 import queries from '../utilities/queries';
-import "../../styles/views/contact.scss";
+// import "../../styles/views/contact.scss";
 
 const Contact = () => {
     const context = React.useContext(AppContext);

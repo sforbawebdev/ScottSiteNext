@@ -1,4 +1,4 @@
-import upwork from '../../../images/upwork.svg';
+import upwork from '../../public/images/upwork.svg';
 const SVG = (props)=>{
     const {name} = props;
 

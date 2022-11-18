@@ -5,7 +5,7 @@ import { useQuery} from '@apollo/client';
 import queries from '../utilities/queries';
 import ProjectList from '../components/ProjectList';
 import Title from '../components/Title';
-import "../../styles/views/portfolio.scss";
+// import "../../styles/views/portfolio.scss";
 
 const Portfolio = () => {
     const context = React.useContext(AppContext);

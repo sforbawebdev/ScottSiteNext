@@ -2,7 +2,7 @@ import ServiceCard from './cards/ServiceCard';
 import { useQuery} from '@apollo/client';
 import queries from '../utilities/queries';
 import Reveal from "../widgets/Reveal";
-import "../../styles/views/contact.scss";
+// import "../../styles/views/contact.scss";
 
 const ServiceList = () => {
     const query = queries.SERVICES_QUERY();

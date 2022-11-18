@@ -7,7 +7,7 @@ import Title from '../components/Title';
 import Reveal from '../widgets/Reveal';
 import queries from '../utilities/queries';
 import ServiceList from '../components/ServiceList';
-import "../../styles/views/about.scss";
+// import "../../styles/views/about.scss";
 
 const About = () => {
     const context = React.useContext(AppContext);

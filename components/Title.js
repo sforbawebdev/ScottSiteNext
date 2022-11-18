@@ -1,4 +1,4 @@
-import "../../styles/components/_title.scss";
+// import "../../styles/components/_title.scss";
 import Reveal from "../widgets/Reveal";
 
 const Title = (props) => {

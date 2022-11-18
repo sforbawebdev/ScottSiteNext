@@ -1,4 +1,5 @@
-import "../../styles/widgets/_image.scss";
+// import "../../styles/widgets/_image.scss";
+
 const Image = (props) => {
     const {type, src, className, children, alt} = props;
     return type === 'background' ? (

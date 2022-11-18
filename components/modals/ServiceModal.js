@@ -1,4 +1,4 @@
-import "../../styles/components/modals/_service-modal.scss";
+// import "../../styles/components/modals/_service-modal.scss";
 
 const ServiceModal = ({ children, isShowing, hide }) =>{
     return(

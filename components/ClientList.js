@@ -5,7 +5,7 @@ import { useQuery} from '@apollo/client';
 import Slick from "react-slick";
 import queries from '../utilities/queries';
 import Reveal from "../widgets/Reveal";
-import "../../styles/views/testimonials.scss";
+// import "../../styles/views/testimonials.scss";
 
 const settings = {
     dots: false,

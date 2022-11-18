@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {fontSetter} from '../../utilities/helpers';
-import "../../../styles/components/_services.scss";
+// import "../../../styles/components/_services.scss";
 import '../../utilities/fontawesome-config';
 
 

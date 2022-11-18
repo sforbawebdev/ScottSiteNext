@@ -1,6 +1,6 @@
 import React from 'react'
 import {AppContext} from '../providers/AppProvider';
-import "../../styles/components/_navigation.scss";
+// import "../../styles/components/_navigation.scss";
 
 const Navigation = (props) => {
     const {pages} = props;

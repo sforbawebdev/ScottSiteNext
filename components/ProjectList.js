@@ -2,11 +2,8 @@ import ProjectCard from './cards/ProjectCard';
 import { useQuery} from '@apollo/client';
 import queries from '../utilities/queries';
 import Reveal from "../widgets/Reveal";
-import "../../styles/views/portfolio.scss";
+// import "../../styles/views/portfolio.scss";
 
-// const renderList = (data)=>{
-
-// }
 const ProjectList = () => {
     const query = queries.PROJECTS_QUERY();
     const { loading, error, data } = useQuery(query);
