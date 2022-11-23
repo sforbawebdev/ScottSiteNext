@@ -10,7 +10,7 @@ const ServiceList = () => {
     if (loading) return ('Loading...');
     if (error) {
         console.log(error);
-        return ('Ooops!');
+        return (<div />);
     }
     const service_data = data.services.nodes;   
     return (

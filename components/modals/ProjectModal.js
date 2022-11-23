@@ -1,4 +1,4 @@
-// import "../../../styles/components/modals/_project-modal.scss";
+import Image from 'next/image';
 
 const ProjectModal = ({project}) =>{
     console.log(project);
@@ -12,7 +12,7 @@ const ProjectModal = ({project}) =>{
             <div className={"project-modal__content-row"}>
                 <div className={"project-modal__carousel"}>
                     <div  className={"project-modal__carousel_item"}>
-                        {image && image.sourceUrl && <img src={image.sourceUrl} />}
+                        {image && image.sourceUrl && <Image src={image.sourceUrl} />}
                     </div>
 
                 </div>

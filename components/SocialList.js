@@ -29,7 +29,7 @@ const SocialList = () => {
     if (loading) return ('Loading...');
     if (error) {
         console.log(error);
-        return ('Ooops!');
+        return (<div />);
     }
     const social_data = data.socials.nodes;
     const socials = renderList(social_data);  

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useModal } from '../../providers/ModalProvider';
-import Image from 'next/image';
 import ProjectModal from '../modals/ProjectModal';
+import Image from 'next/image';
 // import "../../../styles/components/_projects.scss";
 import '../../utilities/fontawesome-config';
 
@@ -15,7 +15,7 @@ const ProjectCard = (props) => {
     }
     return (
         <div className="project-card card">
-            {/* {image && image.sourceUrl && <Image src={image.sourceUrl} className="project-card__background" />} */}
+            {image && image.sourceUrl && <Image src={image.sourceUrl} className="project-card__background" />}
             <div className="project-card__links-overlay">
                 <div className="project-card__link-list">
                     <a href={url} className="project-card__link out" rel="noreferrer" target="_blank">

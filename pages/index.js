@@ -1,9 +1,4 @@
 import { useEffect } from 'react';
-
-// import "../styles/global/_normalize.scss";
-// import "../styles/vendor/_slick.scss";
-// import "../styles/global/app.scss";
-// import { Switch, Route, Redirect }from "react-router-dom";
 import queries from '../utilities/queries';
 import sleep from "../utilities/sleep";
 import Error from '../components/Error';

@@ -25,7 +25,7 @@ const ClientList = () => {
     if (loading) return ('Loading...');
     if (error) {
         console.log(error);
-        return ('Ooops!');
+        return (<div />);
     }
     const client_data = data.clients.nodes;
     

@@ -11,7 +11,7 @@ const ServiceCard = (props) => {
     return (
         <div className="service-card card">
             <div className="service-card-icon">
-                <FontAwesomeIcon icon={icon_array} />
+                {icon_array && <FontAwesomeIcon icon={icon_array} />}
             </div>
             <h3 className="service-card__title">{title}</h3>
             <div className="service-card__copy" dangerouslySetInnerHTML={{__html: copy}}/>

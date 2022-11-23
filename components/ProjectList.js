@@ -10,7 +10,7 @@ const ProjectList = () => {
     if (loading) return ('Loading...');
     if (error) {
         console.log(error);
-        return ('Ooops!');
+        return (<div />);
     }
     
     const project_data = data.projects.nodes; 

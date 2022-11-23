@@ -16,7 +16,6 @@ const client = new ApolloClient({
 
 
 function MyApp({ Component, pageProps }) {
-  console.log(client);
   return (
     <AppProvider>        
     <ModalProvider>

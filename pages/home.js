@@ -2,6 +2,7 @@ import React from 'react'
 import { Waypoint } from 'react-waypoint';
 import {AppContext} from '../providers/AppProvider';
 import { useQuery} from '@apollo/client';
+import Loading from '../components/Loading';
 import Reveal from '../widgets/Reveal';
 import Title from '../components/Title';
 import SocialList from '../components/SocialList';
@@ -12,13 +13,15 @@ const Home = () => {
     const context = React.useContext(AppContext);
     const query = queries.HOME_DATA_QUERY();
     const { loading, error, data } = useQuery(query);
+
     if (loading){
-        return 'Loading...'
+        return <Loading />
     } 
     if (error) {
         console.log(error);
-        return false;
+        return (<div />);
     }
+
     const page_data = data.pages.nodes[0].PageContent;
     const {copy} = page_data;
     const handleWayPoint = () =>{
