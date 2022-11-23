@@ -15,7 +15,7 @@ const ProjectCard = (props) => {
     }
     return (
         <div className="project-card card">
-            {image && image.sourceUrl && <Image src={image.sourceUrl} className="project-card__background" />}
+            {/* {image && image.sourceUrl && <Image src={image.sourceUrl} className="project-card__background" />} */}
             <div className="project-card__links-overlay">
                 <div className="project-card__link-list">
                     <a href={url} className="project-card__link out" rel="noreferrer" target="_blank">
