@@ -18,10 +18,10 @@ const client = new ApolloClient({
 function MyApp({ Component, pageProps }) {
   return (
       <AppProvider>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-SWM9GDWS46" />
+        <Script src="/public/gtag-script.js" />
         <Head>
           <meta charset="utf-8" />
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-SWM9GDWS46" />
-            <Script src="/public/gtag-script.js" />
             <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="theme-color" content="#000000" />
