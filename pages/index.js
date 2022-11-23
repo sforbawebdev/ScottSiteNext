@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 // import { Switch, Route, Redirect }from "react-router-dom";
 import queries from '../utilities/queries';
 import sleep from "../utilities/sleep";
+import Error from '../components/Error';
 import Loading from '../components/Loading';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -37,7 +38,9 @@ const App = () => {
     );
   }
   if(error) {
-    return error;
+    return (
+      <Error />
+    );
   }
 
   const page_data =  data.pages.nodes;
