@@ -5,12 +5,13 @@ import ContactForm from '../components/forms/ContactForm';
 import Title from '../components/Title';
 import { useQuery} from '@apollo/client';
 import queries from '../utilities/queries';
-// import "../../styles/views/contact.scss";
 
 const Contact = () => {
     const context = React.useContext(AppContext);
     const query = queries.CONTACT_DATA_QUERY();
+
     const { loading, error, data } = useQuery(query);
+
     if (loading) return 'Loading...'
     if (error) {
         console.log(error);

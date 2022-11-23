@@ -3,11 +3,9 @@ import { Waypoint } from 'react-waypoint';
 import {AppContext} from '../providers/AppProvider';
 import { useQuery} from '@apollo/client';
 import Title from '../components/Title';
-// import Button from '../widgets/Button';
 import Reveal from '../widgets/Reveal';
 import queries from '../utilities/queries';
 import ServiceList from '../components/ServiceList';
-// import "../../styles/views/about.scss";
 
 const About = () => {
     const context = React.useContext(AppContext);

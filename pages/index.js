@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 // import { Switch, Route, Redirect }from "react-router-dom";
 import queries from '../utilities/queries';
 import sleep from "../utilities/sleep";
+import Loading from '../components/Loading';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
@@ -16,20 +17,24 @@ import { useQuery} from '@apollo/client';
 const App = () => {
 
   const hideLoader = () => {
-    document.querySelector(".site-loader").className += " site-loader--loaded";
+    if (typeof window !== "undefined") {
+      document.querySelector(".site-loader").className += " site-loader--loaded";
+    }
   }
-  // useEffect(() => {
-  //   loadReCaptcha('6LdJN2gaAAAAAK1xp40nixDntka8rr4uORcBEE-B',() => {console.log("Recaptcha loaded")});
-  //   sleep(3000).then(() => {
-  //     hideLoader();
-  //   });
-  // })
+  useEffect(() => {
+    // loadReCaptcha('6LdJN2gaAAAAAK1xp40nixDntka8rr4uORcBEE-B',() => {console.log("Recaptcha loaded")});
+    sleep(3000).then(() => {
+      hideLoader();
+    });
+  })
 
   const ROUTE_QUERY = queries.ROUTE_QUERY();
   const { loading, error, data } = useQuery(ROUTE_QUERY);
 
   if(loading) {
-    return null;
+    return (
+      <Loading />
+    );
   }
   if(error) {
     return error;

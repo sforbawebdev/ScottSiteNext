@@ -8,7 +8,8 @@
 @import './global/site-loader';
 @import './global/app';
 
-
+@import './components/site-loader';
+@import './components/loading';
 @import './components/clients';
 @import './components/footer';
 @import './components/header';
