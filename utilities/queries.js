@@ -6,7 +6,7 @@ const queries = {
         query GetPageData{
             pages(where: {title: "Home"})  {
                 nodes {
-                  PageContent {
+                  pageContent {
                     title
                     url
                     copy
@@ -26,7 +26,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "ABOUT"})  {
               nodes {
-                PageContent {
+                pageContent {
                   title
                   url
                   copy
@@ -41,7 +41,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "CONTACT"})  {
               nodes {
-                PageContent {
+                pageContent {
                   title
                   url
                   copy
@@ -56,7 +56,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "PORTFOLIO"})  {
               nodes {
-                PageContent {
+                pageContent {
                   title
                   url
                   copy
@@ -88,7 +88,7 @@ const queries = {
             nodes {
               id
               title
-              ServiceContent {
+              serviceContent {
                 icon
                 title
                 copy
@@ -104,11 +104,11 @@ const queries = {
       query GetProjects{
         projects {
           nodes {
-            ProjectContent {
+            projectContent {
               title
               description
               url
-             image {
+              image {
                 id
                 sourceUrl
               }
@@ -124,7 +124,7 @@ const queries = {
       query GetSocials{
         socials {
           nodes {
-            SocialContent {	
+            socialContent {	
               name
               url
             }
@@ -138,7 +138,7 @@ const queries = {
       query GetClients{
         clients {
           nodes {
-            ClientContent {
+            clientContent {
               title
               person
               copy
