@@ -71,7 +71,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "TESTIMONIALS"})  {
               nodes {
-                PageContent {
+                pageContent {
                   title
                   url
                   copy

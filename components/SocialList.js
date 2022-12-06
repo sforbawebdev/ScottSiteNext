@@ -6,7 +6,7 @@ import Reveal from "../widgets/Reveal";
 
 const renderList = (data)=>{
     return data && data.map((item, index)=>{
-        const social = item.SocialContent;
+        const social = item.socialContent;
         let {name, url} = social;
         name = name.toLowerCase();
         return (
