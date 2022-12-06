@@ -35,7 +35,7 @@ const ClientList = () => {
             <Slick  {...settings} className={"client-slider"}>
                 {
                     client_data && client_data.map((item, index)=>{
-                        const client = item.ClientContent;
+                        const client = item.clientContent;
                         return(
                             <div key={index} className="client-list-item">
                                 <ClientCard client={client} />

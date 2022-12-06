@@ -18,7 +18,7 @@ const ServiceList = () => {
             <ul className="service-list">
                 {
                     service_data && service_data.map((item, index)=>{
-                        const service = item.ServiceContent;
+                        const service = item.serviceContent;
                         return(
                             <Reveal key={index}  preset={"fadeUp"} delay={(index * 50)}>
                                 <li className="service-list-item">

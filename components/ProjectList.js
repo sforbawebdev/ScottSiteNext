@@ -19,7 +19,7 @@ const ProjectList = () => {
             <div className="project-list">
                 {
                 project_data && project_data.map((item, index)=>{
-                    const project = item.ProjectContent;
+                    const project = item.projectContent;
                     return(
                         <Reveal key={index}  preset={"fadeUp"} delay={(index * 50)}>
                             <div className="project-list-item">
