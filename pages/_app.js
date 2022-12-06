@@ -7,6 +7,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache,HttpLink } from '@apollo/cl
 
 const link = new HttpLink({
   uri: `${process.env.NEXT_PUBLIC_WP_ENDPOINT}/graphql`,
+  credentials: 'include',
 });
 
 const client = new ApolloClient({
