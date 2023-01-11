@@ -6,7 +6,7 @@ const queries = {
         query GetPageData{
             pages(where: {title: "Home"})  {
                 nodes {
-                  pageContent {
+                  PageContent {
                     title
                     url
                     copy
@@ -26,7 +26,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "ABOUT"})  {
               nodes {
-                pageContent {
+                PageContent {
                   title
                   url
                   copy
@@ -41,7 +41,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "CONTACT"})  {
               nodes {
-                pageContent {
+                PageContent {
                   title
                   url
                   copy
@@ -56,7 +56,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "PORTFOLIO"})  {
               nodes {
-                pageContent {
+                PageContent {
                   title
                   url
                   copy
@@ -71,7 +71,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "TESTIMONIALS"})  {
               nodes {
-                pageContent {
+                PageContent {
                   title
                   url
                   copy
@@ -88,7 +88,7 @@ const queries = {
             nodes {
               id
               title
-              serviceContent {
+              ServiceContent {
                 icon
                 title
                 copy
@@ -104,7 +104,7 @@ const queries = {
       query GetProjects{
         projects {
           nodes {
-            projectContent {
+            ProjectContent {
               title
               description
               url
@@ -124,7 +124,7 @@ const queries = {
       query GetSocials{
         socials {
           nodes {
-            socialContent {	
+            SocialContent {	
               name
               url
             }
@@ -138,7 +138,7 @@ const queries = {
       query GetClients{
         clients {
           nodes {
-            clientContent {
+            ClientContent {
               title
               person
               copy

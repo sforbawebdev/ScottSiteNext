@@ -22,7 +22,8 @@ const Home = () => {
         return (<div />);
     }
 
-    const page_data = data.pages.nodes[0].pageContent;
+    const page_data = data?.pages?.nodes[0]?.PageContent || {};
+
     const {copy} = page_data;
     const handleWayPoint = () =>{
         context.setActiveNav("home")

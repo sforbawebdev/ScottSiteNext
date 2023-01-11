@@ -6,9 +6,11 @@ import Reveal from "../widgets/Reveal";
 
 const renderList = (data)=>{
     return data && data.map((item, index)=>{
-        const social = item.socialContent;
+        const social = item?.SocialContent || {};
+        console.log(social);
         let {name, url} = social;
-        name = name.toLowerCase();
+        name = name?.toLowerCase();
+
         return (
             <Reveal key={index}  preset={"fadeUp"} delay={(index * 50)}>
                 <li className="social-list__item">
