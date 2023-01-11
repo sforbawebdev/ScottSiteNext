@@ -12,13 +12,13 @@ const ServiceList = () => {
         console.log(error);
         return (<div />);
     }
-    const service_data = data.services.nodes;   
+    const service_data = data?.services?.nodes;   
     return (
         <div className="service-list-wrap">
             <ul className="service-list">
                 {
                     service_data && service_data.map((item, index)=>{
-                        const service = item.serviceContent;
+                        const service = item.ServiceContent;
                         return(
                             <Reveal key={index}  preset={"fadeUp"} delay={(index * 50)}>
                                 <li className="service-list-item">

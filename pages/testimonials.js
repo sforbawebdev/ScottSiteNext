@@ -21,7 +21,8 @@ const Testimonials = () => {
         console.log(error);
         return false;
     }
-    const page_data = data.pages.nodes[0].pageContent;
+    const page_data = data?.pages?.nodes[0]?.PageContent || {};
+
     const {title} = page_data;
     const handleWayPoint = () =>{
         console.log(context.setActiveNav("testimonials"));

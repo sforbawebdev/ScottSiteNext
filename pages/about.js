@@ -20,7 +20,7 @@ const About = () => {
         return (<div />);
     }
 
-    const page_data = data.pages.nodes[0].pageContent;
+    const page_data = data?.pages?.nodes[0]?.PageContent || {};
 
     const {title, copy} = page_data;
     // const handleButtonClick = () =>{

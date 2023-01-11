@@ -13,13 +13,13 @@ const ProjectList = () => {
         return (<div />);
     }
     
-    const project_data = data.projects.nodes; 
+    const project_data = data?.projects?.nodes; 
     return (
         <div className="project-list-wrap">
             <div className="project-list">
                 {
                 project_data && project_data.map((item, index)=>{
-                    const project = item.projectContent;
+                    const project = item.ProjectContent;
                     return(
                         <Reveal key={index}  preset={"fadeUp"} delay={(index * 50)}>
                             <div className="project-list-item">

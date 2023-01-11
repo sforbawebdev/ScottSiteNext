@@ -38,7 +38,8 @@ const App = () => {
     );
   }
 
-  const page_data =  data.pages.nodes;
+  const page_data =  data?.pages?.nodes;
+
   return (
     <div className="app">
       <Header />
