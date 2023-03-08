@@ -9,13 +9,22 @@ const ProjectCard = (props) => {
     const {project} = props;
     const { setModal } = useModal();
     const {url, title, image} = project;
+    console.log(image);
     const handleClick = e =>{
         e.preventDefault();
         setModal(<ProjectModal project={project}/>);
     }
     return (
         <div className="project-card card">
-            {image && image.sourceUrl && <Image src={image.sourceUrl} className="project-card__background" />}
+            {image && 
+            image.sourceUrl && 
+                (
+                    <img 
+                        src={image.sourceUrl}
+                        className="project-card__background"
+                    />
+                )
+            }
             <div className="project-card__links-overlay">
                 <div className="project-card__link-list">
                     <a href={url} className="project-card__link out" rel="noreferrer" target="_blank">
