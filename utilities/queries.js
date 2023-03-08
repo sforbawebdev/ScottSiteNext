@@ -6,7 +6,7 @@ const queries = {
         query GetPageData{
             pages(where: {title: "Home"})  {
                 nodes {
-                  PageContent {
+                  pageContent {
                     title
                     url
                     copy
@@ -26,7 +26,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "ABOUT"})  {
               nodes {
-                PageContent {
+                pageContent {
                   title
                   url
                   copy
@@ -41,7 +41,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "CONTACT"})  {
               nodes {
-                PageContent {
+                pageContent {
                   title
                   url
                   copy
@@ -56,7 +56,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "PORTFOLIO"})  {
               nodes {
-                PageContent {
+                pageContent {
                   title
                   url
                   copy
@@ -71,7 +71,7 @@ const queries = {
       query GetPageData{
           pages(where: {title: "TESTIMONIALS"})  {
               nodes {
-                PageContent {
+                pageContent {
                   title
                   url
                   copy

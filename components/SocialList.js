@@ -7,7 +7,7 @@ import Reveal from "../widgets/Reveal";
 const renderList = (data)=>{
     return data && data.map((item, index)=>{
         const social = item?.SocialContent || {};
-        console.log(social);
+    
         let {name, url} = social;
         name = name?.toLowerCase();
 
@@ -16,7 +16,7 @@ const renderList = (data)=>{
                 <li className="social-list__item">
                     <a className="social-list__link" href={url} rel="noreferrer" target="_blank">
                         <div className="social-list__icon">
-                        <Icon name={name} type={name === 'upwork' ? 'svg':'fa'}/>
+                            <Icon name={name} type={name === 'upwork' ||  name === 'fiverr' ? 'svg':'fa'}/>
                         </div>
                     </a>
                 </li>           
