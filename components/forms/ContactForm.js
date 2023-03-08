@@ -5,14 +5,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import {postToCF} from '../../utilities/helpers';
 // import { ReCaptcha} from 'react-recaptcha-v3'
-const {REACT_APP_WP_API_ENDPOINT} = process.env;
 
 const ContactForm = () =>{
     const recaptcha  = useRef(null);
     const [submitState, setSubmitState] = useState(false);
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = async  data => {
-        const response = await postToCF(REACT_APP_WP_API_ENDPOINT, data);
+        const response = await postToCF( data);
         let status = response.status === "mail_sent";
         setSubmitState(status);
     };

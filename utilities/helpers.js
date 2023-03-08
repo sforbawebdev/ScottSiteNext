@@ -1,4 +1,4 @@
-export const postToCF = async (uri, data) => {
+export const postToCF = async (data) => {
     let form_data = new FormData();
     for ( let key in data ) {
         form_data.append(key, data[key]);
@@ -8,7 +8,7 @@ export const postToCF = async (uri, data) => {
         body: form_data
     };
     
-    let response = await fetch(`${uri}/wp-json/contact-form-7/v1/contact-forms/74/feedback`, requestOptions)
+    let response = await fetch(`${process.env.NEXT_PUBLIC_WP_ENDPOINT}/wp-json/contact-form-7/v1/contact-forms/${process.env.NEXT_COTACT_FORM_ID}/feedback`, requestOptions)
     .then((response) => response.json())
     .then((data) => {
         console.log("Create Success: ", data);
@@ -20,6 +20,7 @@ export const postToCF = async (uri, data) => {
     })
     return response;
 }
+
 export const fontSetter =(name)=>{
     switch(name) {
         case "wordpress": 
