@@ -19,11 +19,9 @@ const ProjectCard = (props) => {
             {image && 
             image.sourceUrl && 
                 (
-                    <Image 
+                    <img 
                         src={image.sourceUrl}
                         className="project-card__background"
-                        width={100}
-                        height={200} 
                     />
                 )
             }

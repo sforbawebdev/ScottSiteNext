@@ -12,7 +12,7 @@ const ProjectModal = ({project}) =>{
             <div className={"project-modal__content-row"}>
                 <div className={"project-modal__carousel"}>
                     <div  className={"project-modal__carousel_item"}>
-                        {image && image.sourceUrl && <Image src={image.sourceUrl} />}
+                        {image && image.sourceUrl && <img src={image.sourceUrl} />}
                     </div>
 
                 </div>
