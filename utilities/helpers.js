@@ -8,7 +8,7 @@ export const postToCF = async (data) => {
         body: form_data
     };
     
-    let response = await fetch(`${process.env.NEXT_PUBLIC_WP_ENDPOINT}/wp-json/contact-form-7/v1/contact-forms/${process.env.NEXT_COTACT_FORM_ID}/feedback`, requestOptions)
+    let response = await fetch(`${process.env.NEXT_PUBLIC_WP_ENDPOINT}/wp-json/contact-form-7/v1/contact-forms/${process.env.NEXT_PUBLIC_CONTACT_FORM_ID}/feedback`, requestOptions)
     .then((response) => response.json())
     .then((data) => {
         console.log("Create Success: ", data);
