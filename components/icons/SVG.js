@@ -5,7 +5,7 @@ const SVG = (props)=>{
 
     return(
         <div>
-            <Image src={'/images/upwork.svg'} width={20} height={20} alt={name}/>
+            <Image src={`/images/${name}.svg`} width={20} height={20} alt={name}/>
         </div>
     )
 }

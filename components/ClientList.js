@@ -31,20 +31,20 @@ const ClientList = () => {
     
     return (
         <Reveal preset={"fadeUp"} delay={100}>
-        <div className="client-list-wrap">
-            <Slick  {...settings} className={"client-slider"}>
-                {
-                    client_data && client_data.map((item, index)=>{
-                        const client = item.ClientContent;
-                        return(
-                            <div key={index} className="client-list-item">
-                                <ClientCard client={client} />
-                            </div>           
-                        )
-                    })
-                }
-            </Slick>
-        </div>
+            <div className="client-list-wrap">
+                <Slick  {...settings} className={"client-slider"}>
+                    {
+                        client_data && client_data.map((item, index)=>{
+                            const client = item.ClientContent;
+                            return(
+                                <div key={index} className="client-list-item">
+                                    <ClientCard client={client} />
+                                </div>           
+                            )
+                        })
+                    }
+                </Slick>
+            </div>
         </Reveal>
     );
 }
