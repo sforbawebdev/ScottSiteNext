@@ -23,6 +23,12 @@ export const postToCF = async (data) => {
 
 export const fontSetter =(name)=>{
     switch(name) {
+        case "headless": 
+            return ['fa-solid', 'network-wired']           
+        case "api": 
+            return ['fa-solid', 'server']               
+        case "shopify": 
+            return ['fab', 'shopify']        
         case "wordpress": 
             return ['fab', 'wordpress']
         case "desktop":

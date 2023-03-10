@@ -7,6 +7,7 @@ import '../../utilities/fontawesome-config';
 const ServiceCard = (props) => {
     const {service} = props;
     const {title, icon, copy} = service;
+    console.log(icon);
     const icon_array = icon && fontSetter(icon.toLowerCase());
     return (
         <div className="service-card card">
