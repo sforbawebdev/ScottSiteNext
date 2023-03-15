@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { NextSeo } from 'next-seo';
 import queries from '../utilities/queries';
 import sleep from "../utilities/sleep";
 import Error from '../components/Error';
@@ -41,20 +42,26 @@ const App = () => {
   const page_data =  data?.pages?.nodes;
 
   return (
-    <div className="app">
-      <Header />
-      {
-        page_data && page_data.map((page, index)=> {
-          const title = page.title.toLowerCase();
-            return (
-              <Views page={title} key={index} />
-            );
-        })
-      }
-      <Footer />
-      <Navigation pages={page_data}/>
-      <div id="modal-root"/>
-    </div>
+    <>
+        <NextSeo
+          title="Scott Forba - Software Engineer"
+          description="Home page description of the page"
+        />
+      <div className="app">
+        <Header />
+        {
+          page_data && page_data.map((page, index)=> {
+            const title = page.title.toLowerCase();
+              return (
+                <Views page={title} key={index} />
+              );
+          })
+        }
+        <Footer />
+        <Navigation pages={page_data}/>
+        <div id="modal-root"/>
+      </div>        
+    </>
   );
 }
 
