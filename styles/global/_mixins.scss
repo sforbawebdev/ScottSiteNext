@@ -23,16 +23,16 @@
 @mixin _container {
   width: 100%;
   padding: 0 20px;
-  max-width: 1170px;
-  // @include _minWidthMobile {
-  //   padding: 0 _toVW(60);
-  // }
-  // @include _minWidthTablet {
-  //   padding: 0 _toVW(80);
-  // }
-  // @include _minWidthLarge {
-  //   padding: 0 _toVW(84);
-  // }
+  // max-width: 1170px;
+  @include _minWidthMobile {
+    padding: 0 _toVW(60);
+  }
+  @include _minWidthTablet {
+    padding: 0 _toVW(80);
+  }
+  @include _minWidthLarge {
+    padding: 0 _toVW(84);
+  }
 }
 @mixin _header_container {
   width: 100%;
