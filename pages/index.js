@@ -19,7 +19,7 @@ const App = () => {
     }
   }
   useEffect(() => {
-    // loadReCaptcha('6LdJN2gaAAAAAK1xp40nixDntka8rr4uORcBEE-B',() => {console.log("Recaptcha loaded")});
+    loadReCaptcha(process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY,() => {console.log("Recaptcha loaded")});
     sleep(3000).then(() => {
       hideLoader();
     });

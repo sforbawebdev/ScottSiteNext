@@ -4,7 +4,7 @@ import Reveal from  '../../widgets/Reveal';
 import React from "react";
 import { useForm } from "react-hook-form";
 import {postToCF} from '../../utilities/helpers';
-// import { ReCaptcha} from 'react-recaptcha-v3'
+import { ReCaptcha} from 'react-recaptcha-v3'
 
 const ContactForm = () =>{
     const recaptcha  = useRef(null);
@@ -86,12 +86,12 @@ const ContactForm = () =>{
                     </Reveal>
                 )
             }
-        {/* <ReCaptcha
+        <ReCaptcha
             ref={recaptcha}
-            sitekey="6LdJN2gaAAAAAK1xp40nixDntka8rr4uORcBEE-B"
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITEKEY}
             action='action_name'
             verifyCallback={verifyCallback}
-        /> */}
+        />
     </form>
     );
 }
