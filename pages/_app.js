@@ -1,6 +1,5 @@
 import '../styles/globals.scss'
 import Script from 'next/script';
-import Head from 'next/head';
 import {ModalProvider} from '../providers/ModalProvider.js';
 import {AppProvider} from '../providers/AppProvider.js';
 import { ApolloClient, ApolloProvider, InMemoryCache,HttpLink } from '@apollo/client';
@@ -20,7 +19,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
