@@ -1,5 +1,6 @@
 import '../styles/globals.scss'
 import Script from 'next/script';
+import Head from 'next/head';
 import {ModalProvider} from '../providers/ModalProvider.js';
 import {AppProvider} from '../providers/AppProvider.js';
 import { ApolloClient, ApolloProvider, InMemoryCache,HttpLink } from '@apollo/client';
@@ -18,21 +19,19 @@ const client = new ApolloClient({
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}`}/>
       <Script
-        id='google-analytics'
+        src="https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}"
         strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-        __html: `
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${process.env.NEXT_PUBLIC_GTAG}', {
-          page_path: window.location.pathname,
-          });
-        `,
-        }}
-      />    
+
+          gtag('config', '${process.env.NEXT_PUBLIC_GTAG}');
+        `}
+      </Script>
       <AppProvider>        
       <ModalProvider>
         <ApolloProvider client={client}>
