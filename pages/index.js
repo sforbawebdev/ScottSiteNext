@@ -47,6 +47,19 @@ const App = () => {
           title="Scott Forba Software Engineer"
           description="If you're looking for talented and experienced NJ web developers, look no further than Scott Forba! He has eight yers of experience in the industry, and can help you see your project through to completion."
         />
+        <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GTAG}`}
+            strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+            {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${process.env.NEXT_PUBLIC_GTAG}');
+            `}
+        </Script>        
       <div className="app">
         <Header />
         {
