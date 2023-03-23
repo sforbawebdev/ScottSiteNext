@@ -44,8 +44,8 @@ const App = () => {
   return (
     <>
         <NextSeo
-          title="Scott Forba - Software Engineer"
-          description="Home page description of the page"
+          title="Scott Forba Software Engineer"
+          description="If you're looking for talented and experienced NJ web developers, look no further than Scott Forba! He has eight yers of experience in the industry, and can help you see your project through to completion."
         />
       <div className="app">
         <Header />
