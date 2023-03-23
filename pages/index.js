@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import Views from "./views";
 import { useQuery} from '@apollo/client';
-// import { loadReCaptcha } from 'react-recaptcha-v3'
+import { loadReCaptcha } from 'react-recaptcha-v3'
 
 const App = () => {
 

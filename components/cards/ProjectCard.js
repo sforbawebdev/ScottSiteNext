@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
     const {project} = props;
     const { setModal } = useModal();
     const {url, title, image} = project;
-    console.log(image);
+
     const handleClick = e =>{
         e.preventDefault();
         setModal(<ProjectModal project={project}/>);
