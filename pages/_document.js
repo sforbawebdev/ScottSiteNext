@@ -3,7 +3,6 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
     return (
         <Html>
-            <Head />
             <body>
                 <div className="site-loader">
                     <div className="site-loader__content">
