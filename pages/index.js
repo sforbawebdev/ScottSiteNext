@@ -8,9 +8,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
 import Views from "./views";
-import Script from 'next/script';
 import { useQuery} from '@apollo/client';
 import { loadReCaptcha } from 'react-recaptcha-v3'
+import Script from 'next/script';
 
 const App = () => {
 
